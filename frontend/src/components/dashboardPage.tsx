@@ -91,12 +91,23 @@ function Dashboard() {
     }
   }, []);
 
-  const handleShare = async () => {
-    const response = await shareContent();
+  // const handleShare = async () => {
+  //   const response = await shareContent();
 
-    setShareUrl(response.data.shareUrl);
-    setShowShareCard(true);
-  };
+  //   setShareUrl(response.data.shareUrl);
+  //   setShowShareCard(true);
+  // };
+  const handleShare = async () => {
+  const response = await shareContent();
+
+  const backendShareUrl = response.data.shareUrl;
+  const shareId = backendShareUrl.split("/share/")[1];
+
+  const finalShareUrl = `${window.location.origin}/share/${shareId}`;
+
+  setShareUrl(finalShareUrl);
+  setShowShareCard(true);
+};
 
   const handleDelete = async (_id: string) => {
     try {
