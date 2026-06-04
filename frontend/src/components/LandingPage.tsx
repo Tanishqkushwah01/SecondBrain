@@ -234,7 +234,6 @@ function Feature({
   icon,
   title,
   desc,
-  darkMode,
 }: {
   icon: React.ReactNode;
   title: string;

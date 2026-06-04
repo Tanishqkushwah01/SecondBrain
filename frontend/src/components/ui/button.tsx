@@ -2,7 +2,7 @@
 
 type ButtonSize = "sm" | "md" | "lg" | "none";
 type ButtonVariant = "Dark" | "Light" | "none";
-type BtnType = "submit" | "reset" | "button";
+// type BtnType = "submit" | "reset" | "button";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: React.ReactNode;
